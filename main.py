@@ -5,12 +5,13 @@ from recoleccion_waze import WazeAPI
 from filtrar_waze import FiltrarDatosJson
 from filtrar_datos import FiltrarDatosExcel
 import dotenv #Se debe agregar esta libreria para poder utilizar el archivo .env
+import strings
 
 # Lee el archivo .env
 dotenv.load_dotenv()
 # Usar la fecha actual para nombrar la carpeta
 date_str = datetime.now().strftime('%d-%m-%y')
-ruta_mac = os.environ.get("ruta_mac")
+ruta_mac = strings.ruta_mac
 output_dir = f"{ruta_mac}/{date_str}"
 os.makedirs(output_dir, exist_ok=True)
 

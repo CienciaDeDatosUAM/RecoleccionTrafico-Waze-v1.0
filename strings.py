@@ -1,0 +1,1 @@
+ruta_mac="Ruta donde se alojara los datos"
